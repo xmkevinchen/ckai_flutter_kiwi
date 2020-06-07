@@ -5,7 +5,7 @@ abstract class Repository {
   Future<WeatherResponse> fetchLondonWeather();
 }
 
-class RepositoryImpl extends Repository {
+class RepositoryImpl implements Repository {
   Api _api;
 
   RepositoryImpl(this._api);

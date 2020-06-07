@@ -5,17 +5,18 @@ import 'package:kiwi/kiwi.dart' as kiwi;
 
 void main() {
   Injector.setup();
-  runApp(MyApp());
+  var container = kiwi.Container();
+  var app = container.resolve<MyApp>();
+  runApp(app);
 }
 
 class MyApp extends StatelessWidget {
-  MyApp() : super();
+  final WeatherScreen _weatherScreen;
+  MyApp(this._weatherScreen) : super();
   @override
   Widget build(BuildContext context) {
-    var container = kiwi.Container();
-    var weatherScreen = container.resolve<WeatherScreen>();
     return MaterialApp(
-      home: Scaffold(body: weatherScreen),
+      home: Scaffold(body: _weatherScreen),
     );
   }
 }

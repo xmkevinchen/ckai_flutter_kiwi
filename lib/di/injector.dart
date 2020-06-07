@@ -11,9 +11,9 @@ part 'injector.g.dart';
 abstract class Injector {
   @Register.singleton(Api)
   @Register.singleton(Repository, from: RepositoryImpl)
-  @Register.factory(WeatherBloc)
-  @Register.factory(WeatherScreen)
   @Register.singleton(MyApp)
+  @Register.factory(WeatherBloc)
+  @Register.factory(WeatherScreen)  
   void configure();
 
   static void setup() {
