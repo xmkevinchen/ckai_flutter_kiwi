@@ -1,6 +1,8 @@
 # ckai_flutter_kiwi
 
 Flutter Dependency Injection sample with kiwi package
+- [kiwi](https://github.com/letsar/kiwi)
+- [kiwi_generator](https://github.com/letsar/kiwi/tree/master/kiwi_generator)`7
 
 ## Highlights
 
